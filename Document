@@ -1,0 +1,76 @@
+ User Management Interface Specification 
+Purpose
+This document outlines the layout, components, and behavior of the User Management Interface. It is intended for developers tasked with implementing this interface using a frontend framework and integrating it with backend APIs.
+
+Interface Sections
+1. User List Panel (Left Side)
+Contains a “+ New User” button to open the user creation form.
+
+Includes a checkbox labeled “Hide Disabled User” to filter the list by active users.
+
+Displays a data table with the following columns:
+
+ID: Automatically generated numeric identifier.
+
+User Name: The account username.
+
+Email: User's registered email.
+
+Enabled: A true/false flag indicating whether the account is active.
+
+Each column supports sorting and filtering.
+Clicking on any user row opens that user's data in the form on the right.
+
+2. User Details Form (Right Side)
+This panel supports both user creation and editing.
+
+Form Fields:
+
+Username: Required; must be unique.
+
+Display Name: Optional.
+
+Phone: Optional; should follow a valid phone format.
+
+Email: Required; must be in correct format.
+
+User Roles: Dropdown allowing selection of one or more roles:
+
+Guest
+
+Admin
+
+SuperAdmin
+
+Enabled: Checkbox that controls account activation.
+
+Buttons & Behaviors:
+
+Save User button: Validates input and saves the form.
+
+Form validation rules:
+
+Username and email must not be empty.
+
+Email must be properly formatted.
+
+Duplicate usernames should be prevented with a warning.
+
+UI Logic & Behaviors
+When the page loads, only users marked as enabled (Enabled = true) are shown.
+
+Clicking “+ New User” clears the right panel for data entry.
+
+Clicking an existing user row fills the form with that user’s information.
+
+Toggling “Hide Disabled User” dynamically filters the table.
+
+After saving, the table should refresh to reflect changes.
+
+Development Notes
+This UI can be developed using technologies like React, Angular, or Vue.
+
+Backend should provide user CRUD APIs and role list.
+
+Ensure responsive design and accessibility where possible.
+
