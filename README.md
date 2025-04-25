@@ -1,4 +1,3 @@
-# User-interface-specification-document
 # User Management Interface
 
 This project contains the UI implementation and specifications for a user management screen. It includes user listing, filtering, and editing features, and is intended to be integrated with a backend API.
